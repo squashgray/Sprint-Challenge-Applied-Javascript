@@ -15,8 +15,7 @@ const tabLocation = document.querySelector('.topics')
 
 axios.get('https://lambda-times-backend.herokuapp.com/topics')
     .then(response =>{
-        response.data.topics.forEach(item=>{
-            console.log (item)
+        response.data.topics.forEach(item=> {
             tabLocation.append(createTab(item))
         })
     })
