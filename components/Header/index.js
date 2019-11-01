@@ -19,9 +19,9 @@ function Header() {
     const h1 = document.createElement('h1');
     const span2 = document.createElement('span');
 
-    div1.classList.add(header);
-    span1.classList.add(date);
-    span2.classList.add(temp);
+    div1.classList.add('header');
+    span1.classList.add('date');
+    span2.classList.add('temp');
 
     div1.appendChild(span1);
     div1.appendChild(h1);
@@ -30,6 +30,9 @@ function Header() {
     span1.textContent = "SMARCH 28, 2019";
     h1.textContent = "Lambda Times";
     span2.textContent = "98°";
+    console.log(div1);
 
     return div1;
 }
+
+Header();

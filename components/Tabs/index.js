@@ -9,3 +9,23 @@
 //    <div class="tab">topic here</div>
 
 
+
+
+const tabLocation = document.querySelector('.topics')
+
+axios.get('https://lambda-times-backend.herokuapp.com/topics')
+    .then(response =>{
+        response.data.topics.forEach(item=>{
+            console.log (item)
+            tabLocation.append(createTab(item))
+        })
+    })
+
+function createTab(topic){
+    const div1 = document.createElement('div');
+    div1.classList.add('tab');
+    div1.textContent = topic;
+
+    return div1;
+} 
+
