@@ -9,9 +9,9 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
-const head1 = document.querySelector('.header-container');
+const addP = document.querySelector('.header-container');
 
-head1.appendChild(Header);
+addP.appendChild(Header());
 
 function Header() {
     const div1 = document.createElement('div');
@@ -31,8 +31,5 @@ function Header() {
     h1.textContent = "Lambda Times";
     span2.textContent = "98°";
 
-
     return div1;
-
-
 }
